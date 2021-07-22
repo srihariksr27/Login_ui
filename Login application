@@ -61,6 +61,7 @@ class Ui_MainWindow(object):
         self.pushButton_2.clicked.connect(self.lineEdit1.clear)
         self.pushButton_2.clicked.connect(self.lineEdit2.clear)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.Button01.clicked.connect(self.chckpasswrd)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -69,6 +70,12 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(_translate("MainWindow", "reset"))
         self.Email.setText(_translate("MainWindow", "Email  :"))
         self.Password.setText(_translate("MainWindow", "Password  :"))
+    def chckpasswrd(self):
+        text=self.lineEdit2.text()
+        if text=='srihari':
+           print("Valid password")
+        else:
+            print("Invalid Password")
 
 
 if __name__ == "__main__":
